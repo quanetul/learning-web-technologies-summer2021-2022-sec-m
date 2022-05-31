@@ -1,0 +1,34 @@
+<employees>
+
+     	<employee>
+		<id>1</id>
+		<name>John Doe</name>
+		<address>
+			<house></house>
+			<road></road>
+			<area></area>
+			<city></city>
+		</address>
+		<department></department>
+		<salary></salary>
+
+	</employee>
+
+	<employee>
+		<id></id>
+		<name></name>
+		<address></address>
+		<department></department>
+		<salary></salary>
+	
+	</employee>
+
+	<employee>
+  		<id></id>
+		<name></name>
+		<address></address>
+		<department></department>
+		<salary></salary>
+	</employee>
+
+</employees>
