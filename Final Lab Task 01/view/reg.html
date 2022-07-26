@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>REGISTRATION</title>
+  </head>
+  <body>
+    <style>
+.error {color: #FF0000;}
+ </style>
+
+    <form method="post" action="reg.php" enctype="">
+      <fieldset>
+        <center>
+            <legend><b>REGISTRATION</b></legend>
+            <div class="content">
+            <table>
+                <tr>
+                    <td>
+                        Id:<span class="error">* <?php echo $id ;?></span><br />
+                        <input type="text" name="id" value="" /><br />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Username:<span class="error">* <?php echo $username ;?></span><br>
+                        <input type="text" name="username" value="" /><br />
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        Password:<span class="error">* <?php echo $password ;?></span><br />
+                        <input type="password" name="password" value="" /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password:<span class="error">* <?php echo $confirmpass ;?></span><br>
+                        <input type="password" name="confirmpass" value="" /><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:<span class="error">* <?php echo $email ;?></span><br>
+                        <input type="email" name="email" value="" /><br />
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        Address:<br>
+                        <input type="text" name="address" value="" /><br />
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <hr>
+                        <input type="submit" name="submit" value="Submit" />
+                        <a href="login.html"> Login </a>
+                    </td>
+                </tr>
+            </table>
+            </div>
+    
+         
+        
+      </fieldset>
+    </form>
+
+  </body>
+</html>
