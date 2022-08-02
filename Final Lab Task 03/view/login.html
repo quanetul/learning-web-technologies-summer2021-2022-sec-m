@@ -1,0 +1,43 @@
+    
+        <head>
+            <link rel='stylesheet' href="../css/style.css" >
+            <script src="../controller/loginCheck.js"></script>
+
+        </head>
+            <center><h2>Login</h2>
+
+                Username or Email:<br>
+                <input type="text" id='username' placeholder="username"/><br>
+                <h3></h3>
+
+                Password: <br>
+                <input type="password" id='password' placeholder="password" /><br>
+                <h3>Enter Username and Password</h3>
+
+                <input type="submit" class='submit' value="Login" onclick="msg()"/><br>
+                </center>
+                
+        
+
+
+  
+
+    <script>
+
+
+        function msg()
+        {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            if(validate(username, password))
+            {
+                document.getElementsByTagName('h3')[1].innerHTML = '<div id="success">Login Success<div>';
+            }
+            else
+            {
+                document.getElementsByTagName('h3')[1].innerHTML = '<div id="warning">Invalid/Null Credentials<div>';
+            }
+        }
+
+    </script></center>
