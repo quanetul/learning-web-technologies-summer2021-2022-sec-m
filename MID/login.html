@@ -1,0 +1,77 @@
+<?php 
+  session_start();
+
+?>
+<html>
+<head>
+  
+<?php include 'links.php' ?>
+</head>
+  <body background="patient.jpg"  >
+    <style>
+.error {color: #FF0000;}
+ </style>
+
+ <?php
+  include 'db.php';
+if(issest($_POST['submit'])){
+  
+  $id = $_POST['id'];
+  $password = $_POST['password'];
+
+  $id_search = "select * from registration id= '$id ";
+  $query = mysqli_query($con,$id_search);
+
+$id_count = mysqli_num_rows($query) ;
+
+if($id_count){
+
+    $id_password = mysqli_fetch_assoc($query);
+
+    $db_password = $id_password ['password'];
+
+    $_SESSION[]
+
+    $pass_decode = password_verify($password, $id_password );
+
+    if($pass_decode){
+
+        echo "login";
+      ?>
+      <script>
+        
+      location.replace("patientHome.php"); </script>
+         
+          <?php
+    }else{
+
+      echo "incorrect";
+    }else {
+
+      echo "invalid"
+    }
+
+  }
+}
+?>
+    <form method="post" action="login.php" enctype="">
+      <fieldset>
+        <center>
+        <legend><b>LOGIN</b></legend>
+        <div class="content">
+          User ID:<span class="error">* <?php echo $id ;?></span><br>
+          <input type="text" name="id" value=""  /><br />
+          Password:<span class="error">* <?php echo $password ;?></span><br />
+          <input type="password" name="password" value="" /><br />
+          <div class="register">
+            <input type="submit" name="login" value="Submit" class="submitButton"/>
+          </div>
+          <div class="register">
+            <a href="reg.php"> Register </a>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
